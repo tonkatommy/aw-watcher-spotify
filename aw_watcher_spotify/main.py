@@ -21,9 +21,9 @@ from aw_client.client import ActivityWatchClient
 logger = logging.getLogger("aw-watcher-spotify")
 DEFAULT_CONFIG = """
 [aw-watcher-spotify]
-username = "tonkatommy"
-client_id = "1e1ac4ee762a462e8f034d8683f38222"
-client_secret = "d9a0a51d8f454778aecd5137888523d5"
+username = ""
+client_id = ""
+client_secret = ""
 poll_time = 5.0"""
 
 
@@ -85,7 +85,7 @@ def auth(client_id=None, client_secret=None):
         auth_manager = SpotifyOAuth(
             client_id=client_id,
             client_secret=client_secret,
-            redirect_uri="http://127.0.0.1:8088",
+            redirect_uri="http://192.168.1.222:8088/",
             scope="user-read-playback-state user-read-currently-playing",
             cache_path=token_path
         )
